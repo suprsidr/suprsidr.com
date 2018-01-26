@@ -1,0 +1,83 @@
+{
+  "name": "technical-review",
+  "version": "1.0.1",
+  "description": "Sample CRUD APP for technical review",
+  "main": "index.js",
+  "scripts": {
+    "prestart": "npm run task",
+    "start": "gulp",
+    "start-dev": "node server/dev-server.js",
+    "lint": "eslint components",
+    "pm2": "npm run task && pm2 restart 1",
+    "menu": "webpack --config webpack.menu.config.js",
+    "build": "webpack && gulp build --production",
+    "task": "webpack",
+    "test": "mocha -w ./test/**/*.spec.js --compilers js:babel-core/register",
+    "gulp": "gulp",
+    "gulp-watch": "gulp watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/suprsidr/technical-review.git"
+  },
+  "keywords": [],
+  "author": "Wayne Patterson <suprsidr@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/suprsidr/technical-review/issues"
+  },
+  "homepage": "https://github.com/suprsidr/technical-review#readme",
+  "babel": {
+    "presets": ["react", "es2015", "stage-0"]
+  },
+  "devDependencies": {
+    "babel-core": "^6.0.20",
+    "babel-eslint": "^6.0.3",
+    "babel-loader": "^6.0.1",
+    "babel-preset-es2015": "^6.0.15",
+    "babel-preset-react": "^6.0.15",
+    "babel-preset-stage-0": "^6.0.15",
+    "babelify": "^7.2.0",
+    "eslint": "^2.8.0",
+    "eslint-plugin-react": "^3.6.2",
+    "estraverse-fb": "^1.3.1",
+    "expect": "^1.20.1",
+    "expect-jsx": "^2.5.1",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "mocha": "^2.4.5",
+    "watchify": "^3.2.2",
+    "browser-sync": "^2.10.0",
+    "gulp": "gulpjs/gulp#4.0",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-babel": "^6.1.2",
+    "gulp-concat": "^2.5.2",
+    "gulp-cssnano": "^2.1.0",
+    "gulp-extname": "^0.2.0",
+    "gulp-if": "^2.0.0",
+    "gulp-load-plugins": "^1.1.0",
+    "gulp-sass": "^2.1.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^1.2.0",
+    "webpack": "^1.12.2",
+    "yargs": "^3.8.0"
+  },
+  "dependencies": {
+    "body-parser": "~1.15.1",
+    "compression": "^1.6.1",
+    "cookie-parser": "~1.4.1",
+    "express": "^4.13.3",
+    "history": "^2.1.0",
+    "minimongo": "^3.8.2",
+    "merge": "^1.2.0",
+    "mongodb": "^2.1.18",
+    "uuid": "^2.0.2",
+    "path": "^0.12.7",
+    "react": "^15.0.2",
+    "react-dom": "^15.0.2",
+    "react-foundation": "^0.6.8",
+    "react-modal": "^1.1.2",
+    "react-router": "^2.3.0",
+    "superagent": "^1.8.3",
+    "superagent-jsonp": "0.0.6"
+  }
+}

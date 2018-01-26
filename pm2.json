@@ -1,0 +1,9 @@
+{
+  "apps": [
+    {
+      "name": "tech-review",
+      "script": "./server/server.js",
+      "watch": ["server"]
+    }
+  ]
+}
