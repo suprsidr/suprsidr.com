@@ -1,6 +1,7 @@
 var express = require("express"),
   path = require("path"),
   app = express(),
+  cors = require("cors"),
   compression = require("compression"),
   routes = require('../routes/index'),
   cookieParser = require('cookie-parser'),
@@ -14,6 +15,7 @@ var ItemProvider = require("../itemprovider-mongodb").ItemProvider,
 itemProvider.open(function() {});
 
 app.use(compression());
+app.use(cors());
 app.set("jsonp callback", true);
 
 app.use(bodyParser.json());
