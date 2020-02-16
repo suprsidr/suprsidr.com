@@ -4,6 +4,6 @@ module.exports = {
     port: 27017,
     name: 'hhproducts',
     user: 'appAdmin',
-    pass: 'WsP010867@#$%'
+    pass: '*****'
   }
 }
